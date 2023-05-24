@@ -1,0 +1,11 @@
+.completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+
+  body{
+    text-align: center;
+  }
+  ul{
+    list-style: none;
+  }
