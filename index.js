@@ -38,13 +38,13 @@ var tasks = [];
       var taskList = document.getElementById("taskList");
       taskList.innerHTML = ""; // 이전 목록 삭제
 
-      // 할 일 목록 렌더링
+      // 할 일 목록 
       for (var i = 0; i < tasks.length; i++) {
         var taskItem = document.createElement("li");
         var taskText = tasks[i].text;
         var completed = tasks[i].completed;
 
-        taskItem.innerHTML = '<span onclick="completeTask(this, ' + i + ')"' + (completed ? ' class="completed"' : '') + '>' + taskText + '</span><button onclick="editTask(' + i + ')">수정</button><button onclick="deleteTask(this, ' + i + ')">삭제</button>';
+        taskItem.innerHTML = '<span onclick="completeTask(this, ' + i + ')"' + (completed ? ' class="completed"' : '') + '>' + taskText + '</span>  <button onclick="editTask(' + i + ')">수정</button>  <button onclick="deleteTask(this, ' + i + ')">삭제</button>';
         taskList.appendChild(taskItem);
       }
     }
