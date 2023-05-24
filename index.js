@@ -10,7 +10,7 @@ var tasks = [];
         tasks = JSON.parse(storedTasks);
 
         // 할 일 목록 렌더링
-        renderTaskList();
+        showTaskList();
       }
     }
 
@@ -26,13 +26,15 @@ var tasks = [];
         // 로컬 저장소에 할 일 데이터 저장
         localStorage.setItem("tasks", JSON.stringify(tasks));
 
-        renderTaskList();
+        showTaskList();
 
         taskInput.value = "";
       }
+      else
+        alert("할 일을 입력하세요!");
     }
 
-    function renderTaskList() {
+    function showTaskList() {
       var taskList = document.getElementById("taskList");
       taskList.innerHTML = ""; // 이전 목록 삭제
 
@@ -66,7 +68,7 @@ var tasks = [];
         // 로컬 저장소에 할 일 데이터 저장
         localStorage.setItem("tasks", JSON.stringify(tasks));
         
-        renderTaskList();
+        showTaskList();
       }
     }
 
@@ -77,5 +79,5 @@ var tasks = [];
       // 로컬 저장소에 할 일 데이터 저장
       localStorage.setItem("tasks", JSON.stringify(tasks));
 
-      renderTaskList();
+      showTaskList();
     }
